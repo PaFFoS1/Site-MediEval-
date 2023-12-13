@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Main{% endblock %}
+{% block content %}
+      <div class="tabs">
+        <div class="tabs__content">
+          <div class="tabs__content-item">
+            {% if object_list.count == 0 %}
+            <h3>Мероприятий нет</h3>
+            {% else %}
+            {% for item in object_list %}
+
+            <div class="card">
+              <h4 class="card__title">{{ item.add }}</h4>
+              <img src="{{ item.img.url }}" width="300" height="300" style="border-radius: 30px" alt="" class="card__img">
+            </div>
+            {% endfor %}
+            {% endif %}
+
+        </div>
+      </div>
+      </div>
+{% endblock %}

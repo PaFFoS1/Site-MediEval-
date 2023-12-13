@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Main{% endblock %}
+{% block content %}
+      <section class="top">
+        <div class="container">
+          <h1 class="title_1">
+            Откройте врата средневековья с нами!
+          </h1>
+          <h2 class="title_2">
+            Откройте двери в мир <br> средневекового великолепия:<br>
+             организация сказочных <br> средневековых турниров
+          </h2>
+          <a href="{%url 'order'%}" id="open_pop" class="top__link">Оформление заказа</a>
+        </div>
+      </section>
+{% endblock %}

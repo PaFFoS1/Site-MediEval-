@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drevne_Rus_Servise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+<div class="pop_up" id = "pop_up">
+    <div class="pop_up_container">
+      <div class="pop_up_body" id = "pop_up_body">
+        <img src="{% static 'main/images/logo.png' %}" alt="" class="logo_img">
+        <form method="post">
+          {% csrf_token %}
+          {{form.name}}<br>
+          {{form.phone}}<br>
+          {{form.email}}<br>
+          {{form.data}}<br>
+          <span>{{error}}</span>
+          <button type="submit">Оформить заказ</button>
+        </form>
+        <a href="{%url 'home'%}" class="pop_up_close" id = "pop_up_close">&#10006</a>
+      </div>
+    </div>
+  </div>
+</body>
